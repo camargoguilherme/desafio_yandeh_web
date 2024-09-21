@@ -4,6 +4,7 @@ class AppConfigModel {
   String? primaryColor;
   String? appBarColor;
   String? textAppBarColor;
+  String? splashScreenBackgroundColor;
   String? successColor;
   String? errorColor;
   String? white;
@@ -11,6 +12,8 @@ class AppConfigModel {
   String? yellow;
   String? grey;
   String? red;
+  String? orange;
+  String? lightOrange;
   String? title;
   String? black;
 
@@ -22,6 +25,7 @@ class AppConfigModel {
     this.primaryColor,
     this.appBarColor,
     this.textAppBarColor,
+    this.splashScreenBackgroundColor,
     this.successColor,
     this.errorColor,
     this.white,
@@ -29,6 +33,8 @@ class AppConfigModel {
     this.yellow,
     this.grey,
     this.red,
+    this.orange,
+    this.lightOrange,
     this.title,
     this.black,
   });
@@ -39,6 +45,7 @@ class AppConfigModel {
     primaryColor = json['primaryColor'];
     appBarColor = json['appBarColor'];
     textAppBarColor = json['textAppBarColor'];
+    splashScreenBackgroundColor = json['splashScreenBackgroundColor'];
     successColor = json['successColor'];
     errorColor = json['errorColor'];
     white = json['white'];
@@ -46,6 +53,8 @@ class AppConfigModel {
     yellow = json['yellow'];
     grey = json['grey'];
     red = json['red'];
+    orange = json['orange'];
+    lightOrange = json['lightOrange'];
     title = json['title'];
     black = json['black'];
 
@@ -64,6 +73,7 @@ class AppConfigModel {
     data['primaryColor'] = primaryColor;
     data['appBarColor'] = appBarColor;
     data['textAppBarColor'] = textAppBarColor;
+    data['splashScreenBackgroundColor'] = splashScreenBackgroundColor;
     data['successColor'] = successColor;
     data['errorColor'] = errorColor;
     data['white'] = white;
@@ -71,6 +81,8 @@ class AppConfigModel {
     data['yellow'] = yellow;
     data['grey'] = grey;
     data['red'] = red;
+    data['orange'] = orange;
+    data['lightOrange'] = lightOrange;
     data['title'] = title;
     data['black'] = black;
 

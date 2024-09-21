@@ -1,6 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
-import 'authentication_screen_page.dart';
+import './authentication_screen_page.dart';
 
 class AuthenticationModule extends Module {
   @override

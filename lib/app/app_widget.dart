@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import './core/utils/global_scaffold.dart';
-import 'core/styles/app_colors.dart';
+import './core/styles/app_colors.dart';
 
 class AppScrollBehavior extends MaterialScrollBehavior {
   @override
