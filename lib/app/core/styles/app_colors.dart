@@ -7,6 +7,8 @@ class AppColors {
   static Color appBarColor = const Color(0xFF17181A);
   static Color textAppBarColor = const Color(0xFFFFFFFF);
   static Color splashScreenBackgroundColor = const Color(0xFFD8F2F3);
+  static Color textColor = const Color(0xFF1D1B20);
+  static Color textPriceColor = const Color(0xFF04283B);
   static Color white = const Color(0xFFFFFFFF);
   static Color lightWhite = const Color(0xFFF4F4FA);
   static Color yellow = const Color(0xFFF6E266);

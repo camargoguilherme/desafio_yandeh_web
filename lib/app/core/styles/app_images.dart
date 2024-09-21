@@ -4,6 +4,8 @@ class AppImages {
   static String logoApp = "assets/images/logo-app.png";
   static String logoLoading = "assets/images/logo-loading.png";
   static String backgroundAppWeb = "assets/images/background-app-web.png";
+  static String tomateAppWeb = "assets/images/tomate.png";
+  static String bandejaVagemAppWeb = "assets/images/bandeja-vagem.png";
   static String cartAppWeb = "assets/svgs/cart.svg";
 
   static void init(List<ImageList> images) {
