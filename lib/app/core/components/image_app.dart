@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../styles/app_images.dart';
 
@@ -12,6 +13,7 @@ class ImageApp extends StatelessWidget {
   final Color? color;
   final double scale;
   final bool canGoHome;
+  final bool isSvg;
   final Function? onClick;
 
   const ImageApp(this.path,
@@ -23,6 +25,7 @@ class ImageApp extends StatelessWidget {
       this.scale = 1.0,
       this.package,
       this.canGoHome = true,
+      this.isSvg = false,
       this.onClick});
 
   ImageProvider provider() {
@@ -63,15 +66,27 @@ class ImageApp extends StatelessWidget {
             onClick?.call();
           }
         },
-        child: Image.asset(
-          path,
-          width: width,
-          height: height,
-          fit: fit,
-          color: color,
-          scale: scale,
-          package: package,
-        ),
+        child: !isSvg
+            ? Image.asset(
+                path,
+                width: width,
+                height: height,
+                fit: fit,
+                color: color,
+                scale: scale,
+                package: package,
+              )
+            : SvgPicture.asset(
+                path,
+                width: width,
+                height: height,
+                fit: fit ?? BoxFit.contain,
+                colorFilter: ColorFilter.mode(
+                  color ?? Colors.black,
+                  BlendMode.srcIn,
+                ),
+                package: package,
+              ),
       );
     }
   }
