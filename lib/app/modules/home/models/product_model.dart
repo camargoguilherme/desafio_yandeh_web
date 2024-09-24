@@ -7,7 +7,7 @@ class ProductModel {
   String package;
   String ean;
   double unitContent;
-  String? unitMeasure;
+  String? unitMessure;
   int packageQuantity;
   String price;
 
@@ -20,7 +20,7 @@ class ProductModel {
     required this.package,
     required this.ean,
     required this.unitContent,
-    this.unitMeasure,
+    this.unitMessure,
     required this.packageQuantity,
     required this.price,
   });
@@ -34,7 +34,7 @@ class ProductModel {
         package = json['package'],
         ean = json['ean'],
         unitContent = double.parse(json['unitContent'].toString()),
-        unitMeasure = json['unitMeasure'] ?? '',
+        unitMessure = json['unitMessure'] ?? '',
         packageQuantity = int.parse(json['packageQuantity'].toString()),
         price = json['price'];
 
@@ -49,7 +49,7 @@ class ProductModel {
     data['package'] = package;
     data['ean'] = ean;
     data['unitContent'] = unitContent;
-    data['unitMeasure'] = unitMeasure;
+    data['unitMessure'] = unitMessure;
     data['packageQuantity'] = packageQuantity;
     data['price'] = price;
 

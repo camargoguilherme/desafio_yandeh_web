@@ -19,13 +19,21 @@ class AppImages {
 
   static void _fromMap(Map<String, String> map) {
     logoApp = map['logoApp'] ?? logoApp;
+    logoLoading = map['logoLoading'] ?? logoLoading;
     backgroundAppWeb = map['backgroundAppWeb'] ?? backgroundAppWeb;
+    tomateAppWeb = map['tomateAppWeb'] ?? tomateAppWeb;
+    bandejaVagemAppWeb = map['bandejaVagemAppWeb'] ?? bandejaVagemAppWeb;
+    cartAppWeb = map['cartAppWeb'] ?? cartAppWeb;
   }
 
   static Map<String, String> _toMap() {
     final Map<String, String> map = {};
     map['logoApp'] = logoApp;
+    map['logoLoading'] = logoLoading;
     map['backgroundAppWeb'] = backgroundAppWeb;
+    map['tomateAppWeb'] = tomateAppWeb;
+    map['bandejaVagemAppWeb'] = bandejaVagemAppWeb;
+    map['cartAppWeb'] = cartAppWeb;
     return map;
   }
 }

@@ -4,29 +4,25 @@ import 'package:intl/intl.dart';
 import '../../../core/components/image_app.dart';
 import '../../../core/styles/app_colors.dart';
 import '../../../core/styles/app_images.dart';
-import '../../../core/utils/responsive_layout.dart';
 import '../models/product_model.dart';
 
 class ProductCard extends StatelessWidget {
   final ProductModel product;
+  final bool showTomate;
   final formatCurrency = NumberFormat.simpleCurrency(locale: 'pt_BR');
 
-  ProductCard({super.key, required this.product});
+  ProductCard({super.key, required this.product, this.showTomate = false});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: ResponsiveLayout.isLargerDesktop(context) ||
-              ResponsiveLayout.isExtraLargerDesktop(context)
-          ? 275
-          : ResponsiveLayout.screenWidth(context) * 0.45,
-      height: 475,
+      width: 275,
+      height: 450,
       child: Card(
-        semanticContainer: true,
+        semanticContainer: false,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        elevation: 5,
         color: AppColors.white,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -37,7 +33,9 @@ class ProductCard extends StatelessWidget {
               Stack(
                 children: [
                   ImageApp(
-                    AppImages.tomateAppWeb,
+                    showTomate
+                        ? AppImages.tomateAppWeb
+                        : AppImages.bandejaVagemAppWeb,
                     fit: BoxFit.contain,
                   ),
                   Positioned(
@@ -85,7 +83,7 @@ class ProductCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
-                      '${product.unitContent} ${product.unitMeasure}', // Conteúdo e unidade
+                      '${product.unitContent} ${product.unitMessure}', // Conteúdo e unidade
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,

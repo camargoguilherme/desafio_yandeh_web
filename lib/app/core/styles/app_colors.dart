@@ -18,4 +18,14 @@ class AppColors {
   static Color lightOrange = const Color(0xFFE0E0E0);
   static Color title = const Color(0xFF333337);
   static Color black = const Color(0xFF000000);
+
+// Cores Card Carrossel
+  static Color fracionadosSection = const Color(0xFF007C61);
+  static Color promoSection = const Color(0xFFED1C24);
+  static Color preferidosSection = const Color(0xFFFE4B02);
+  static Color descubraSection = const Color(0xFF35A88F);
+  static Color frutasSection = const Color(0xFF7BBD1B);
+  static Color hortifrutiSection = const Color(0xFF72C532);
+  static Color legumesSection = const Color(0xFF007C61);
+  static Color temperosSection = const Color(0xFFEB7A7E);
 }

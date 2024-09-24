@@ -20,6 +20,8 @@ dependencies:
   intl: ^0.19.0
   dio: ^5.7.0
   talker_dio_logger: ^4.4.1
+  video_player: ^2.9.1
+  chewie: ^1.8.5
 
 dev_dependencies:
   flutter_test:
@@ -43,9 +45,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - ./assets/
+    - ./assets/sections-with-products.json
     - ./assets/images/logo-app.png
     - ./assets/images/logo-loading.png
     - ./assets/images/background-app-web.png
     - ./assets/images/tomate.png
     - ./assets/images/bandeja-vagem.png
     - ./assets/svgs/cart.svg
+    - ./assets/videos/home.mp4
+    - ./assets/videos/queridinhos.mp4
+    - ./assets/videos/hortifruti.mp4
