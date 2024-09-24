@@ -48,6 +48,7 @@ flutter:
     - ./assets/sections-with-products.json
     - ./assets/images/logo-app.png
     - ./assets/images/logo-loading.png
+    - ./assets/images/yandeh-logo.png
     - ./assets/images/background-app-web.png
     - ./assets/images/tomate.png
     - ./assets/images/bandeja-vagem.png

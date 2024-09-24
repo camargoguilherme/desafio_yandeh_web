@@ -150,26 +150,15 @@ class _ProductCarouselState extends State<ProductCarousel> {
             Positioned(
               top: 180,
               left: -40,
-              child: InkWell(
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: _scrollLeft,
-                child: Container(
-                  width: 56,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(8.0),
-                    ),
-                    color: AppColors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Icon(
-                      Icons.arrow_back_ios,
-                      size: 24,
-                    ),
+              child: ElevatedButton.icon(
+                onPressed: () {},
+                label: Icon(Icons.arrow_back_ios, color: AppColors.textColor),
+                style: ElevatedButton.styleFrom(
+                  elevation: 5,
+                  backgroundColor: AppColors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
@@ -179,26 +168,16 @@ class _ProductCarouselState extends State<ProductCarousel> {
             Positioned(
               top: 180,
               right: -40,
-              child: InkWell(
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: _scrollRight,
-                child: Container(
-                  width: 56,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(8.0),
-                    ),
-                    color: AppColors.white,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Icon(
-                      Icons.arrow_forward_ios,
-                      size: 24,
-                    ),
+              child: ElevatedButton.icon(
+                onPressed: () {},
+                label:
+                    Icon(Icons.arrow_forward_ios, color: AppColors.textColor),
+                style: ElevatedButton.styleFrom(
+                  elevation: 5,
+                  backgroundColor: AppColors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),

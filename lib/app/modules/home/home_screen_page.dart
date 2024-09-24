@@ -1,3 +1,4 @@
+import 'package:desafio_yandeh_web/app/core/components/header_app.dart';
 import 'package:desafio_yandeh_web/app/modules/home/components/product_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -73,25 +74,37 @@ class _HomeScreenState extends State<HomeScreenPage> {
 
     return Scaffold(
       body: SizedBox(
-        height: ResponsiveLayout.screenHeight(context),
         width: ResponsiveLayout.screenWidth(context),
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: isPhone ? 0 : 40),
-          child: Center(
-            child: _sections.isEmpty
-                ? Center(child: CircularProgressIndicator())
-                : SingleChildScrollView(
-                    child: Column(
-                      children: _sections.map((section) {
-                        return Padding(
-                          padding: EdgeInsets.only(
-                              bottom: section.products.isNotEmpty ? 120 : 15),
-                          child: _getWidgetBySection(section, isPhone),
-                        );
-                      }).toList(),
-                    ),
-                  ),
-          ),
+        height: ResponsiveLayout.screenHeight(context),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            HeaderApp(
+              isPhone: isPhone,
+              onSearch: (text) {},
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: isPhone ? 0 : 40),
+                child: _sections.isEmpty
+                    ? Center(child: CircularProgressIndicator())
+                    : SingleChildScrollView(
+                        controller: _scrollController,
+                        scrollDirection: Axis.vertical,
+                        child: Column(
+                          children: _sections.map((section) {
+                            return Padding(
+                              padding: EdgeInsets.only(
+                                  bottom:
+                                      section.products.isNotEmpty ? 120 : 15),
+                              child: _getWidgetBySection(section, isPhone),
+                            );
+                          }).toList(),
+                        ),
+                      ),
+              ),
+            ),
+          ],
         ),
       ),
     );
