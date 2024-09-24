@@ -25,8 +25,8 @@ class _HomeScreenState extends State<HomeScreenPage> {
   @override
   void initState() {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    // loadProducts();
-    loadProductsAsync();
+    loadProducts();
+    // loadProductsFromFile();
     super.initState();
   }
 
@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreenPage> {
     });
   }
 
-  Future<void> loadProductsAsync() async {
+  Future<void> loadProductsFromFile() async {
     final data = await readJson();
     Future.delayed(
       const Duration(seconds: 0),
